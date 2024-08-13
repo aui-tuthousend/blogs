@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import {ref, watchEffect} from "vue";
+import ChooseSheet from "@/components/chooseSheet.vue";
 
   const data = ref([]);
 
@@ -12,7 +13,7 @@ import {ref, watchEffect} from "vue";
 </script>
 
 <template>
-  halo
+  <choose-sheet/>
 <!--  {{data}}-->
 </template>
 
