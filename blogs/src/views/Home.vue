@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import {ref, watchEffect} from "vue";
+import {ref} from "vue";
 import ChooseSheet from '@/components/chooseSheet.vue';
 
   const data = ref([]);
