@@ -1,7 +1,5 @@
 <script setup>
 import {ref, watchEffect} from "vue";
-import { dotStream } from 'ldrs'
-dotStream.register()
 
 const message = ref('upload new sheet')
 const jurusan = ref('a')
@@ -53,13 +51,6 @@ watchEffect(async ()=> {
         </select>
 
         <button v-if="jurusan == 'a'" @click.prevent="notify"><h5>go</h5></button>
-        <div v-if="loading">
-          <l-dot-stream
-              size="60"
-              speed="2.5"
-              color="black"
-          ></l-dot-stream>
-        </div>
         <div v-else-if="per.length == 0">
           <p>Sheet dengan jurusan {{ jurusan }} belum ada</p>
         </div>

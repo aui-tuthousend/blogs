@@ -1,10 +1,8 @@
 <script setup>
 import {ref, watchEffect} from 'vue';
 import {useRoute} from "vue-router";
-import { dotStream } from 'ldrs'
 import Sheets from "@/components/sheets.vue"
 
-dotStream.register()
 
 const standarData = ref([]);
 const loading = ref(true);
@@ -54,14 +52,7 @@ const refreshPage = () => {
              v-model="current">
       <label :for="t" style="margin-right: 0.5rem;">{{t}}</label>
     </template>
-    <div v-if="loading">
-      <l-dot-stream
-          size="60"
-          speed="2.5"
-          color="black"
-      ></l-dot-stream>
-    </div>
-    <div v-else-if="standarData ==='Null'">
+    <div v-if="standarData ==='Null'">
       Belum ada data :)
     </div>
     <div v-else class="dt">
